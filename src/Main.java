@@ -5,7 +5,14 @@ public class Main {
         cars.añoDeLanzamiento=2005;
         cars.duracionMinutos=120;
 
-        cars.muestraFichaTeccnica();
+        cars.muestraFichaTecnica();
+        cars.evalua(10);
+        cars.evalua(7);
+        cars.evalua(9);
+        System.out.println(cars.sumaEvaluaciones);
+        System.out.println(cars.numeroDeEvaluaciones);
+        System.out.println(cars.calculaNotaMedia());
+
 
         System.out.println("\n");
 
@@ -14,7 +21,6 @@ public class Main {
         matrix.añoDeLanzamiento=1999;
         matrix.duracionMinutos=129;
 
-        System.out.println("titulo de la pelicula: "+matrix.Nombre);
-        System.out.println("Año de lanzamiento: "+matrix.añoDeLanzamiento);
+        //matrix.muestraFichaTecnica();
     }
 }
