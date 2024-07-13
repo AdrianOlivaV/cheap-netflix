@@ -3,9 +3,10 @@ import com.Aluracursos.cheapNetflix.modelos.PELICULA;
 public class Main {
     public static void main(String[] args) {
         PELICULA cars = new PELICULA();
-        cars.Nombre="Cars";
-        cars.añoDeLanzamiento=2005;
-        cars.duracionMinutos=120;
+        cars.setNombre("Cars");
+        cars.setAñoDeLanzamiento(2006);
+        cars.setDuracionMinutos(120);
+        cars.setIncluidoEnPlan(true);
 
         cars.muestraFichaTecnica();
         cars.evalua(10);

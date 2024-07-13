@@ -9,11 +9,25 @@ public class PELICULA {
     private double sumaEvaluaciones;
     private int numeroDeEvaluaciones;
 
+    public void setNombre(String nombre) {
+        this.Nombre = nombre;
+    }
+
+    public void setDuracionMinutos(int duracionMinutos) {
+        this.duracionMinutos = duracionMinutos;
+    }
+
+    public void setAñoDeLanzamiento(int añoDeLanzamiento) {
+        this.añoDeLanzamiento = añoDeLanzamiento;
+    }
+
+    public void setIncluidoEnPlan(boolean incluidoEnPlan) {
+        this.incluidoEnPlan = incluidoEnPlan;
+    }
 
     public int getNumeroDeEvaluaciones(){
         return numeroDeEvaluaciones;
     }
-
 
     public void muestraFichaTecnica(){
         System.out.println("titulo de la pelicula: "+Nombre);
