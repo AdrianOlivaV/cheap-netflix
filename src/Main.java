@@ -9,8 +9,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        PELICULA cars = new PELICULA();
-            cars.setNombre("Cars");
+        PELICULA cars = new PELICULA("Cars");
             cars.setAñoDeLanzamiento(2006);
             cars.setDuracionMinutos(120);
             cars.setIncluidoEnPlan(true);
@@ -31,8 +30,7 @@ public class Main {
             breakinBad.setNombre("BRREAKING BAD");
             breakinBad.muestraFichaTecnica();
 
-        PELICULA matrix = new PELICULA();
-            matrix.setNombre("matrix");
+        PELICULA matrix = new PELICULA("matrix");
             matrix.setAñoDeLanzamiento(1999);
             matrix.setDuracionMinutos(180);
             matrix.muestraFichaTecnica();
@@ -56,8 +54,7 @@ public class Main {
 
         //trabajando con arraylist
 
-            var peliDeBruno = new PELICULA();
-            peliDeBruno.setNombre("señor de los anillos");
+            var peliDeBruno = new PELICULA("señor de los anillos");
             peliDeBruno.setDuracionMinutos(180);
             peliDeBruno.setAñoDeLanzamiento(2001);
 
@@ -70,5 +67,8 @@ public class Main {
         System.out.println("la primera pelicula de la lista es: "+listaDePeliculas.get(0).getNombre());
         System.out.println(listaDePeliculas);
         System.out.println("toString de la pelicula: "+listaDePeliculas.get(0).toString());
+
+
+
     }
 }
