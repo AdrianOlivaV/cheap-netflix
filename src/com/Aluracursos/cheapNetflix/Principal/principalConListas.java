@@ -3,9 +3,7 @@ import com.Aluracursos.cheapNetflix.modelos.TITULO;
 import com.Aluracursos.cheapNetflix.modelos.PELICULA;
 import com.Aluracursos.cheapNetflix.modelos.SERIE;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class principalConListas {
     public static void main(String[] args) {
@@ -20,7 +18,7 @@ public class principalConListas {
         SERIE breakinBad = new SERIE("BRREAKING BAD",2010);
 
 
-        ArrayList<TITULO> lista=new ArrayList<>();
+        List<TITULO> lista=new LinkedList<>();
         lista.add(cars);
         lista.add(matrix);
         lista.add(peliDeBruno);
