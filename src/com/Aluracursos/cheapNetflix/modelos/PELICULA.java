@@ -1,6 +1,8 @@
 package com.Aluracursos.cheapNetflix.modelos;
 
-public class PELICULA extends TITULO {
+import com.Aluracursos.cheapNetflix.calculos.Clasificacion;
+
+public class PELICULA extends TITULO implements Clasificacion {
     private String Director;
 
     public String getDirector() {
@@ -9,6 +11,11 @@ public class PELICULA extends TITULO {
 
     public void setDirector(String director) {
         this.Director = director;
+    }
+
+    @Override
+    public int getClasificacion() {
+        return (int) (calculaNotaMedia()/2);
     }
 }
 
