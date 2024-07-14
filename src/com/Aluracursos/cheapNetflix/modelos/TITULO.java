@@ -1,6 +1,6 @@
 package com.Aluracursos.cheapNetflix.modelos;
 
-public class TITULO {
+public class TITULO implements Comparable<TITULO>  {
 
 
     private String Nombre;
@@ -65,5 +65,11 @@ public class TITULO {
 
     public double calculaNotaMedia(){
         return sumaEvaluaciones/numeroDeEvaluaciones;
+    }
+
+
+    @Override
+    public int compareTo(TITULO otroTitulo) {
+        return this.getNombre().compareTo(otroTitulo.getNombre());
     }
 }

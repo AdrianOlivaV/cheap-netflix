@@ -4,6 +4,7 @@ import com.Aluracursos.cheapNetflix.modelos.PELICULA;
 import com.Aluracursos.cheapNetflix.modelos.SERIE;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class principalConListas {
     public static void main(String[] args) {
@@ -32,5 +33,18 @@ public class principalConListas {
             }
 
         }
+
+        ArrayList<String> listaDeArtistas = new ArrayList<>();
+        listaDeArtistas.add("Penelope Cruz");
+        listaDeArtistas.add("Antonio Banderas");
+        listaDeArtistas.add("Ricardo Darin");
+        System.out.println(listaDeArtistas);
+
+        Collections.sort(listaDeArtistas);
+        System.out.println("lista de artistas ordenada " + listaDeArtistas);
+
+        Collections.sort(lista);
+        System.out.println("lista de titulos ordenados "+ lista);
+
     }
 }
