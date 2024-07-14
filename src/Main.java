@@ -1,4 +1,6 @@
 import com.Aluracursos.cheapNetflix.calculos.CalculadoraDeTiempo;
+import com.Aluracursos.cheapNetflix.calculos.Recomendación;
+import com.Aluracursos.cheapNetflix.modelos.Capitulos;
 import com.Aluracursos.cheapNetflix.modelos.PELICULA;
 import com.Aluracursos.cheapNetflix.modelos.SERIE;
 
@@ -12,11 +14,11 @@ public class Main {
             cars.setDuracionMinutos(120);
             cars.setIncluidoEnPlan(true);
             cars.muestraFichaTecnica();
-//        cars.evalua(10);
-//        cars.evalua(7);
-//        cars.evalua(9);
-//        System.out.println(cars.getNumeroDeEvaluaciones());
-//        System.out.println(cars.calculaNotaMedia());
+        cars.evalua(10);
+        cars.evalua(7);
+        cars.evalua(9);
+        System.out.println(cars.getNumeroDeEvaluaciones());
+        System.out.println(cars.calculaNotaMedia());
 
 
 
@@ -40,7 +42,16 @@ public class Main {
             calculadora.incluye(matrix);
         System.out.println(calculadora.getTiempoTotal());
 
+        Recomendación filtroRecomendacion = new Recomendación();
+        filtroRecomendacion.filtro(cars);
 
+        Capitulos episodio = new Capitulos();
+        episodio.setNumero(1);
+        episodio.setNombrre("cola");
+        episodio.setSerie("breaking bad");
+        episodio.setTotalVistas(2500);
+
+        filtroRecomendacion.filtro(episodio);
 
 
     }

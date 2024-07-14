@@ -2,7 +2,7 @@ package com.Aluracursos.cheapNetflix.calculos;
 
 public class Recomendación {
     
-    void filtro(Clasificacion clasificacion){
+    public void filtro(Clasificacion clasificacion){
         if(clasificacion.getClasificacion()>=4){
             System.out.println("lo mas visto del momento");
         } else if (clasificacion.getClasificacion()>=2) {

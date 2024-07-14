@@ -9,6 +9,14 @@ public class Capitulos implements Clasificacion {
     private String serie;
     private int totalVistas;
 
+    public int getTotalVistas() {
+        return totalVistas;
+    }
+
+    public void setTotalVistas(int totalVistas) {
+        this.totalVistas = totalVistas;
+    }
+
     public int getNumero() {
         return numero;
     }
