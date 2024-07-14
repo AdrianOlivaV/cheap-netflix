@@ -5,8 +5,9 @@ import com.Aluracursos.cheapNetflix.calculos.Clasificacion;
 public class PELICULA extends TITULO implements Clasificacion {
     private String Director;
 
-    public PELICULA(String nombre) {
-        this.setNombre(nombre);
+
+    public PELICULA(String nombre, int añoDeLanzamiento) {
+        super(nombre, añoDeLanzamiento);
     }
 
     public String getDirector() {

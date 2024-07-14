@@ -10,6 +10,11 @@ public class TITULO {
     private double sumaEvaluaciones;
     private int numeroDeEvaluaciones;
 
+    public TITULO(String nombre, int añoDeLanzamiento) {
+        this.Nombre = nombre;
+        this.añoDeLanzamiento = añoDeLanzamiento;
+    }
+
     public String getNombre() {
         return Nombre;
     }
