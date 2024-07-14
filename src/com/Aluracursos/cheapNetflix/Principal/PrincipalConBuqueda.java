@@ -23,32 +23,36 @@ public class PrincipalConBuqueda {
 
 
         String direccion ="https://www.omdbapi.com/?t="+busqueda+"&apikey=6c691c59";
+        try {
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(direccion))
+                    .build();
 
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(direccion))
-                .build();
-
-        HttpResponse<String> response = client
-                .send(request, HttpResponse.BodyHandlers.ofString());
-        String json= response.body();
-        System.out.println(json);
+            HttpResponse<String> response = client
+                    .send(request, HttpResponse.BodyHandlers.ofString());
+            String json= response.body();
+            System.out.println(json);
 //
 //        Lo que es una API y su funcionamiento básico;
 //        Cómo funciona la API de OMDb para buscar películas;
 //        Realizar una consulta en la API de OMDb usando Postman;
 //        Cómo integrarse con la API de OMDb en Java, utilizando las clases HttpClient, HttpRequest y HttpResponse.
 
-        Gson gson=new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-                .create();
-        //Gson gson=new Gson();
-        TituloOMDB miTituloOMDB = gson.fromJson(json, TituloOMDB.class);
-        try {
+            Gson gson=new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                    .create();
+            //Gson gson=new Gson();
+            TituloOMDB miTituloOMDB = gson.fromJson(json, TituloOMDB.class);
+
             Titulo miTitulo = new Titulo(miTituloOMDB);
-            System.out.println(miTituloOMDB);
+            System.out.println("titulo ya convertido: "+miTituloOMDB);
         } catch (NumberFormatException e){
             System.out.println("ocurrio un error: ");
             System.out.println(e.getMessage());
+        }catch (IllegalArgumentException e){
+            System.out.println("Error en la URI, verifique la direccion ");
+        }catch (Exception e){
+            System.out.println("ocurrio un error inesperado");
         }
         System.out.println("finalizo la ejecucion del programa");
 
