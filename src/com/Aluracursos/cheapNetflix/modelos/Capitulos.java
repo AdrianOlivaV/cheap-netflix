@@ -1,10 +1,13 @@
 package com.Aluracursos.cheapNetflix.modelos;
 
-public class Capitulos {
+import com.Aluracursos.cheapNetflix.calculos.Clasificacion;
+
+public class Capitulos implements Clasificacion {
 
     private int numero;
     private String nombrre;
     private String serie;
+    private int totalVistas;
 
     public int getNumero() {
         return numero;
@@ -28,5 +31,14 @@ public class Capitulos {
 
     public void setSerie(String serie) {
         this.serie = serie;
+    }
+
+    @Override
+    public int getClasificacion() {
+        if (totalVistas>100){
+            return 4;
+        }else{
+            return 2;
+        }
     }
 }
