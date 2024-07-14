@@ -27,8 +27,10 @@ public class principalConListas {
 
         for (TITULO item: lista){
             System.out.println(item.getNombre());
-            PELICULA pelicula =(PELICULA) item;
-            System.out.println(pelicula.getClasificacion());
+            if(item instanceof PELICULA pelicula && pelicula.getClasificacion()>=5){
+                System.out.println(pelicula.getClasificacion());
+            }
+
         }
     }
 }
