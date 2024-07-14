@@ -17,5 +17,10 @@ public class PELICULA extends TITULO implements Clasificacion {
     public int getClasificacion() {
         return (int) (calculaNotaMedia()/2);
     }
+
+    @Override
+    public String toString() {
+        return "Pelicula: "+this.getNombre()+"("+getAñoDeLanzamiento()+")";
+    }
 }
 
