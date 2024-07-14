@@ -5,6 +5,7 @@ import com.Aluracursos.cheapNetflix.modelos.SERIE;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class principalConListas {
     public static void main(String[] args) {
@@ -45,6 +46,11 @@ public class principalConListas {
 
         Collections.sort(lista);
         System.out.println("lista de titulos ordenados "+ lista);
+
+        lista.sort(Comparator.comparing(TITULO::getAñoDeLanzamiento));
+        System.out.println("Lista ordenada por fecha: "+lista);
+
+
 
     }
 }
