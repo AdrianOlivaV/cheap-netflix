@@ -7,17 +7,16 @@ import java.security.spec.RSAOtherPrimeInfo;
 public class Main {
     public static void main(String[] args) {
         PELICULA cars = new PELICULA();
-        cars.setNombre("Cars");
-        cars.setAñoDeLanzamiento(2006);
-        cars.setDuracionMinutos(120);
-        cars.setIncluidoEnPlan(true);
-
-        cars.muestraFichaTecnica();
-        cars.evalua(10);
-        cars.evalua(7);
-        cars.evalua(9);
-        System.out.println(cars.getNumeroDeEvaluaciones());
-        System.out.println(cars.calculaNotaMedia());
+            cars.setNombre("Cars");
+            cars.setAñoDeLanzamiento(2006);
+            cars.setDuracionMinutos(120);
+            cars.setIncluidoEnPlan(true);
+            cars.muestraFichaTecnica();
+//        cars.evalua(10);
+//        cars.evalua(7);
+//        cars.evalua(9);
+//        System.out.println(cars.getNumeroDeEvaluaciones());
+//        System.out.println(cars.calculaNotaMedia());
 
 
 
@@ -27,19 +26,19 @@ public class Main {
             breakinBad.setMinutosPorEpisodio(50);
             breakinBad.setAñoDeLanzamiento(2010);
             breakinBad.setNombre("BRREAKING BAD");
+            breakinBad.muestraFichaTecnica();
 
-        breakinBad.muestraFichaTecnica();
-        System.out.println(breakinBad.getDuracionMinutos());
+        PELICULA matrix = new PELICULA();
+            matrix.setNombre("matrix");
+            matrix.setAñoDeLanzamiento(1999);
+            matrix.setDuracionMinutos(180);
+            matrix.muestraFichaTecnica();
 
         CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
-        calculadora.incluye(cars);
+            calculadora.incluye(cars);
+            calculadora.incluye(breakinBad);
+            calculadora.incluye(matrix);
         System.out.println(calculadora.getTiempoTotal());
-
-        calculadora.incluye(breakinBad);
-        System.out.println(calculadora.getTiempoTotal());
-
-
-
 
 
 
