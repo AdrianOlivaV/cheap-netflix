@@ -1,10 +1,11 @@
+package com.Aluracursos.cheapNetflix.Principal;
+
 import com.Aluracursos.cheapNetflix.calculos.CalculadoraDeTiempo;
 import com.Aluracursos.cheapNetflix.calculos.Recomendación;
 import com.Aluracursos.cheapNetflix.modelos.Capitulos;
 import com.Aluracursos.cheapNetflix.modelos.PELICULA;
 import com.Aluracursos.cheapNetflix.modelos.SERIE;
 
-import java.security.spec.RSAOtherPrimeInfo;
 import java.util.ArrayList;
 
 public class Main {
@@ -63,6 +64,7 @@ public class Main {
         System.out.println("la primera pelicula de la lista es: "+listaDePeliculas.get(0).getNombre());
         System.out.println(listaDePeliculas);
         System.out.println("toString de la pelicula: "+listaDePeliculas.get(0).toString());
+
 
 
 
