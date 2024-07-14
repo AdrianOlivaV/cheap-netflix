@@ -5,6 +5,7 @@ import com.Aluracursos.cheapNetflix.modelos.TituloOMDB;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.stream.JsonToken;
 
 import java.io.IOException;
 import java.net.URI;
@@ -42,10 +43,23 @@ public class PrincipalConBuqueda {
                 .create();
         //Gson gson=new Gson();
         TituloOMDB miTituloOMDB = gson.fromJson(json, TituloOMDB.class);
-        System.out.println(miTituloOMDB);
-        Titulo miTitulo = new Titulo(miTituloOMDB);
+        try {
+            Titulo miTitulo = new Titulo(miTituloOMDB);
+            System.out.println(miTituloOMDB);
+        } catch (NumberFormatException e){
+            System.out.println("ocurrio un error: ");
+            System.out.println(e.getMessage());
+        }
+        System.out.println("finalizo la ejecucion del programa");
 
 
+//        Lo que aprendimos en esta aula:
+//
+//        Lo que son las bibliotecas de Java;
+//        Cómo instalar la biblioteca Gson en el proyecto, descargando y configurando su archivo jar;
+//        A usar la biblioteca Gson para convertir json en un objeto Java;
+//        Cómo crear un Record en Java, que es una estructura similar a una clase, pero utilizada solo para representar datos;
+//        A flexibilizar la conversión de un json en un objeto Java, siguiendo la documentación de la biblioteca Gson.
 
 
 
