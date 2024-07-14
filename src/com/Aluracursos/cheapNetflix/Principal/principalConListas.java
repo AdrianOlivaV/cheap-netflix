@@ -1,5 +1,5 @@
 package com.Aluracursos.cheapNetflix.Principal;
-import com.Aluracursos.cheapNetflix.modelos.TITULO;
+import com.Aluracursos.cheapNetflix.modelos.Titulo;
 import com.Aluracursos.cheapNetflix.modelos.PELICULA;
 import com.Aluracursos.cheapNetflix.modelos.SERIE;
 
@@ -18,14 +18,14 @@ public class principalConListas {
         SERIE breakinBad = new SERIE("BRREAKING BAD",2010);
 
 
-        List<TITULO> lista=new LinkedList<>();
+        List<Titulo> lista=new LinkedList<>();
         lista.add(cars);
         lista.add(matrix);
         lista.add(peliDeBruno);
         lista.add(breakinBad);
 
 
-        for (TITULO item: lista){
+        for (Titulo item: lista){
             System.out.println(item.getNombre());
             if(item instanceof PELICULA pelicula && pelicula.getClasificacion()>=5){
                 System.out.println(pelicula.getClasificacion());
@@ -45,7 +45,7 @@ public class principalConListas {
         Collections.sort(lista);
         System.out.println("lista de titulos ordenados "+ lista);
 
-        lista.sort(Comparator.comparing(TITULO::getAñoDeLanzamiento));
+        lista.sort(Comparator.comparing(Titulo::getAñoDeLanzamiento));
         System.out.println("Lista ordenada por fecha: "+lista);
 
 

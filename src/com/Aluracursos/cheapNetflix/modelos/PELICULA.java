@@ -2,7 +2,7 @@ package com.Aluracursos.cheapNetflix.modelos;
 
 import com.Aluracursos.cheapNetflix.calculos.Clasificacion;
 
-public class PELICULA extends TITULO implements Clasificacion {
+public class PELICULA extends Titulo implements Clasificacion {
     private String Director;
 
 

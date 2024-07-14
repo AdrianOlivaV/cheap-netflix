@@ -1,8 +1,6 @@
 package com.Aluracursos.cheapNetflix.calculos;
 
-import com.Aluracursos.cheapNetflix.modelos.PELICULA;
-import com.Aluracursos.cheapNetflix.modelos.SERIE;
-import com.Aluracursos.cheapNetflix.modelos.TITULO;
+import com.Aluracursos.cheapNetflix.modelos.Titulo;
 
 public class CalculadoraDeTiempo {
 
@@ -12,7 +10,7 @@ public class CalculadoraDeTiempo {
         return tiempoTotal;
     }
 
-    public void incluye(TITULO titulo){
+    public void incluye(Titulo titulo){
         this.tiempoTotal+=titulo.getDuracionMinutos();
     }
 

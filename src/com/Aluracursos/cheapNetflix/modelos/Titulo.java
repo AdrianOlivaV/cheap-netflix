@@ -1,18 +1,26 @@
 package com.Aluracursos.cheapNetflix.modelos;
 
-public class TITULO implements Comparable<TITULO>  {
+import com.google.gson.annotations.SerializedName;
 
-
+public class Titulo implements Comparable<Titulo>  {
+    @SerializedName("Title")
     private String Nombre;
+    @SerializedName("Year")
     private int añoDeLanzamiento;
     private boolean incluidoEnPlan;
     private int duracionMinutos;
     private double sumaEvaluaciones;
     private int numeroDeEvaluaciones;
 
-    public TITULO(String nombre, int añoDeLanzamiento) {
+    public Titulo(String nombre, int añoDeLanzamiento) {
         this.Nombre = nombre;
         this.añoDeLanzamiento = añoDeLanzamiento;
+    }
+
+    public Titulo(TituloOMDB miTituloOMDB) {
+        this.Nombre = miTituloOMDB.title();
+        this.añoDeLanzamiento=Integer.valueOf(miTituloOMDB.year());
+        this.duracionMinutos=Integer.valueOf(miTituloOMDB.runtime().substring(0,2));
     }
 
     public String getNombre() {
@@ -69,7 +77,14 @@ public class TITULO implements Comparable<TITULO>  {
 
 
     @Override
-    public int compareTo(TITULO otroTitulo) {
+    public int compareTo(Titulo otroTitulo) {
         return this.getNombre().compareTo(otroTitulo.getNombre());
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre='" + Nombre + '\'' +
+                ", añoDeLanzamiento=" + añoDeLanzamiento+
+                "Duracion="+duracionMinutos;
     }
 }

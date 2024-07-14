@@ -1,6 +1,6 @@
 package com.Aluracursos.cheapNetflix.modelos;
 
-public class SERIE extends TITULO {
+public class SERIE extends Titulo {
 
     private int temporadas;
     private int capitulosPorTemporada;
