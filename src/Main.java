@@ -50,8 +50,12 @@ public class Main {
         episodio.setNombrre("cola");
         episodio.setSerie("breaking bad");
         episodio.setTotalVistas(2500);
-
         filtroRecomendacion.filtro(episodio);
+
+
+        //trabajando con arraylist
+
+        
 
 
     }
